@@ -10,7 +10,10 @@ urlpatterns = [
     path('about/', views.about),
     path('detail/<int:id>', views.detail,name="detail"),
     path('articles/',include("article.urls")),
-    path('user/',include("user.urls"))
+    path('user/',include("user.urls")),
+    path('tamamla/',views.tamamla),
+    path('iletisim/',views.iletisim)
+
 
 ]
 

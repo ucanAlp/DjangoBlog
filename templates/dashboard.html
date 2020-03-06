@@ -5,7 +5,7 @@
 	<hr>
 	<p>Hoşgeldiniz,<small>{{request.user.username}}</small></p>
 	
-	<a class="btn btn-danger"href="/articles/addarticle">Makale Ekle</a>
+	<a class="btn btn-danger"href="/tamamla">Alışverişi Tamamla</a>
 <br><br>
 
 {% if articles %}
@@ -13,10 +13,9 @@
   <thead>
     <tr>
       <th scope="col">id</th>
-      <th scope="col">Başlık</th>
-      <th scope="col">Yazar</th>
+      <th scope="col">Ürün Adı</th>
+      <th scope="col">Satıcı</th>
       <th scope="col">Tarih</th>
-      <th scope="col">Güncelle</th>
       <th scope="col">Sil</th>
 
     </tr>
@@ -28,7 +27,7 @@
       <td><a href="/articles/detail/{{article.id}}">{{article.title}}</a></td>
       <td>{{article.author}}</td>
       <td>{{article.created_date}}</td>
-                  <td><a href="/articles/update/{{article.id}}" class="btn btn-warning">Güncelle</a></td>
+                  
             <td><a href="/articles/delete/{{article.id}}" class="btn btn-danger">Sil</a></td>
 
   	{% endfor %}
@@ -38,7 +37,7 @@
 
     </tr>
     {% else %}
-    <div class="alert alert-danger">Henüz bi makale yayınlamadınız.Hemen bir tane yapmaya başlayın!</div>
+    <div class="alert alert-danger">Sepetinizde ürün bulunmuyor</div>
 {% endif %}
 
 

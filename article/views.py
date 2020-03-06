@@ -21,6 +21,12 @@ def index(request):
 	html="<h3>Anasayfa</h3>"
 	return render(request,"index.html")
 
+def tamamla(request):
+	return render(request,"tamamla.html")
+
+
+def iletisim(request):
+	return render(request,"iletisim.html")
 
 def about(request):
 	return render(request,"about.html")
@@ -96,3 +102,6 @@ def addComment(request,id):
 		newComment.article=article
 		newComment.save()
 	return redirect(reverse("article:detail",kwargs={"id":id}))	
+
+
+
